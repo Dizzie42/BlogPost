@@ -96,6 +96,19 @@ app.put("/blogs/:id", (req,res) => {
 	});
 });
 
+//DELETE ROUTE
+app.delete("/blogs/:id", (req,res) => {
+	//Destroy and redirect
+	Blog.findByIdAndRemove(req.params.id, (err)=> {
+		if(err){
+			res.redirect("/blogs");
+		} else {
+			res.redirect("/blogs");
+		}
+	});
+});
+
+//Open
 app.listen(3000, ()=> {
 	console.log("Blog listening on Port 3000");
 });
