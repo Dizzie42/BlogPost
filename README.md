@@ -22,3 +22,14 @@ Part 1
 		*Plan to add a collapsing feature
 	-Database is running with some sample blog posts
 	
+Part 2
+#Add Edit/Update/Delete routes
+
+	-Routes are up and running
+	-No middleware, added sanitizeer to sanitize text fields
+	
+Part 3
+#Styling index.js
+
+	-Fixed main blog page styling
+	-Added edit, delete, submit buttons

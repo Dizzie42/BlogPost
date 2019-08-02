@@ -2,7 +2,7 @@
 
 <div class="ui main text container inverted segment">
 	<div class="ui huge header inverted">Edit '<%=blog.title%>'</div>
-	<form class="ui form inverted" action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
+	<form id="delete" class="ui form inverted" action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
 		<div class="field">
 			<label>Title</label>
 			<input type="text" name="blog[title]" value="<%=blog.title%>"</input>
@@ -15,9 +15,14 @@
 			<label>Blog Content</label>
 			<textarea required name="blog[body]"><%=blog.body%></textarea>
 		</div>
-		<input class="ui inverted orange big button" type="submit">
-
+		<input class="ui inverted blue big button" type="submit">
 	</form>
+	<a href="/blogs/<%=blog._id%>">
+		<button class="delete ui red medium button">
+			Discard
+		</button>	
+	</a>
+
 </div>
 
 <% include ./partials/footer %>
