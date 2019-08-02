@@ -1,9 +1,10 @@
 var express = require("express"),
+	methodOverride = require("method-override"),
 	bodyParser = require("body-parser"),
 	mongoose = require("mongoose"),
 	app = express();
 
-mongoose.connect("mongodb://localhost/blogs", {
+mongoose.connect("mongodb+srv://devsprout:1234@udemy-project-hpcze.mongodb.net/test?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useCreateIndex: true,
 }).then(() => {
@@ -15,6 +16,7 @@ mongoose.connect("mongodb://localhost/blogs", {
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(methodOverride("_method"));
 
 //SCHEMA
 var blogSchema = new mongoose.Schema({
@@ -72,8 +74,27 @@ app.get("/blogs/:id", (req,res) => {
 	});
 });
 
+//EDIT ROUTE
+app.get("/blogs/:id/edit", (req,res) => {
+	Blog.findById(req.params.id, (err,foundBlog) => {
+		if(err){
+			res.redirect("/blogs");
+		} else {
+			res.render("edit", {blog: foundBlog});
+		}
+	});
+});
 
-
+//UPDATE ROUTE
+app.put("/blogs/:id", (req,res) => {
+	Blog.findByIdAndUpdate(req.params.id, req.body.blog, (err, updatedBlog) => {
+		if(err){
+			res.redirect("/blogs");
+		} else {
+			res.redirect("/blogs/"+req.params.id);
+		}
+	});
+});
 
 app.listen(3000, ()=> {
 	console.log("Blog listening on Port 3000");
