@@ -33,3 +33,12 @@ Part 3
 
 	-Fixed main blog page styling
 	-Added edit, delete, submit buttons
+	
+Part 4
+#Finalize styling
+
+	-Finalized some styling, made buttons the same style throughout
+	-Fixed navbar
+	-Responsive on mobile
+	-Color scheme changes
+	-Cleaned up code a bit

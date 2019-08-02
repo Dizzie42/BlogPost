@@ -5,7 +5,7 @@ var express = require("express"),
 	mongoose = require("mongoose"),
 	app = express();
 
-mongoose.connect("mongodb+srv://devsprout:1234@udemy-project-hpcze.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://devsprout:1234@udemy-project-hpcze.mongodb.net/test?retryWrites=true&w=majority", {		//Left password in for demonstration purposes
 	useNewUrlParser: true,
 	useCreateIndex: true,
 }).then(() => {
