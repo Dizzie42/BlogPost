@@ -9,3 +9,12 @@ i.icon {
 #delete {
 	display: inline;
 }
+#date {
+	float: right;
+	color: rgba(255,255,255, 0.35)
+;
+}
+
+.ui.huge.header {
+	font-size: 3em;
+}

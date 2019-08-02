@@ -14,7 +14,8 @@ mongoose.connect("mongodb+srv://devsprout:1234@udemy-project-hpcze.mongodb.net/t
 	console.log('ERROR connecting to Blog Database: ', err.message);
 });
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({extended: true, limit: '10mb'}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
