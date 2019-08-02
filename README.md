@@ -42,3 +42,13 @@ Part 4
 	-Responsive on mobile
 	-Color scheme changes
 	-Cleaned up code a bit
+	
+	
+
+![Home Page]https://ibb.co/yXVnwLg
+
+![Blog View Page]https://ibb.co/hf3qj30
+
+![New Blog Page]https://ibb.co/5GVnMsz
+
+![Edit Blog Page]https://ibb.co/NFqYfWP
