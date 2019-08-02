@@ -1,11 +1,12 @@
 This project is a blog website that will host blog posts in a MongoDB database with images, RESTful format, and Semantic UI for front-end to practice a new API (was using BootStrap 4).  Built in goorm.io to host server with the following dependencies and versions: 
-
-	"body-parser": "^1.19.0",
+    
+    "body-parser": "^1.19.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "mongoose": "^5.6.7",
-    "nodemon": "^1.19.1"
-
+    "express-sanitizer": "^1.0.5",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.3.0-beta2"
+    
 With the following frameworks: 
 
 	-MEAN (no Angular)
