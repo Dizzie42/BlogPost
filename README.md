@@ -43,7 +43,13 @@ Part 4
 	-Color scheme changes
 	-Cleaned up code a bit
 	
-	
+Part 5
+#Finished styling and setting up for deployment
+
+	-Added an atlasMongoDB (cloud database) link instead of local
+	-Added a stand-in entry for an empty blog situation
+
+Screenshots of blog pages
 
 ![Home Page]https://ibb.co/yXVnwLg
 

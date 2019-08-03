@@ -4,7 +4,40 @@
 	<div class="ui huge header">RESTful Blog App</div>
 	<div class="ui top segment">
 		<div class="ui divided items">
-			<% blogs.forEach(function(blog){ %>
+			<% if (blogs === undefined || blogs.length == 0) {%>
+			
+			<div class="item">
+				<div class="image">
+					<a class="ui left corner label" href="/blogs/new">
+						<i class="edit icon"></i>
+					</a>
+					<img src="https://via.placeholder.com/450x300?text=Add+A+Blog">
+				</div>
+				<div class="content">
+					<div class="description">
+						<p>
+							<strong>Click here to add your first blog!</strong>
+						</p>
+					</div>
+					<div class="extra">
+						<a class="ui floated basic blue button" href="/blogs/new">
+							Add
+							<i class="right chevron icon"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+				<!-- <div class="ui fluid image">
+					<a class="ui left corner label" href="/blogs/new">
+						<i class="edit icon"></i>
+					</a>
+					<img src="https://via.placeholder.com/250x250?text=Add+A+Blog">
+				</div> -->
+
+			<% } else { blogs.forEach(function(blog){ %>
 			<div class="item">
 				<div class="image">
 					<img src="<%=blog.image%>">
@@ -30,7 +63,8 @@
 					</div>
 				</div>
 			</div>
-			<% }) %>
+			<% })} %>
+			<%  %>
 		</div>
 	</div>
 </div>

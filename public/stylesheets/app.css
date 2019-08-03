@@ -18,3 +18,15 @@ i.icon {
 .ui.huge.header {
 	font-size: 3em;
 }
+
+#parentButton {
+	bottom: 0;
+    position: absolute;
+    padding: 20;
+}
+
+#myButton {
+	position: absolute;
+    float: right;
+    bottom: 0;
+}
