@@ -8,6 +8,7 @@ var express = require("express"),
 mongoose.connect("mongodb+srv://devsprout:1234@udemy-project-hpcze.mongodb.net/Blogs?retryWrites=true&w=majority", {		//Left password in for demonstration purposes
 	useNewUrlParser: true,
 	useCreateIndex: true,
+	useFindAndModify: false
 }).then(() => {
 	console.log('Connected to Blog Database...');
 }).catch(err => {
