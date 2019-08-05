@@ -1,4 +1,4 @@
-This project is a blog website that will host blog posts in a MongoDB database with images, RESTful format, and Semantic UI for front-end to practice a new API (was using BootStrap 4).  Built in goorm.io to host server with the following dependencies and versions: 
+This project is a blog website that will host blog posts in a MongoDB database with images, RESTful format, and Semantic UI for front-end.  Built in goorm.io to host server with the following NODE dependencies and versions: 
     
     "body-parser": "^1.19.0",
     "ejs": "^2.6.2",
@@ -6,14 +6,11 @@ This project is a blog website that will host blog posts in a MongoDB database w
     "express-sanitizer": "^1.0.5",
     "method-override": "^3.0.0",
     "mongodb": "^3.3.0-beta2"
-    
-With the following frameworks: 
 
-	-MEAN (no Angular)
-	-RESTful API 
-	-Semantic UI
-	-EJS
 
+
+Changes/Additions
+=======
 
 Part 1 
 #Strucutre and basic UI
@@ -50,6 +47,15 @@ Part 5
 	-Added an atlasMongoDB (cloud database) link instead of local
 	-Added a stand-in entry for an empty blog situation
 
+
+TODO's/Nice-to-have's
+=======
+	-Remove dependencies
+	-Remove DB password for remote connect in app.js
+	-Add login functionality
+	-Add date/timestamps
+	-Deploy
+	
 Screenshots of blog pages
 =======
 	
