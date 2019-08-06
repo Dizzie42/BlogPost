@@ -5,7 +5,9 @@ var express = require("express"),
 	mongoose = require("mongoose"),
 	app = express();
 
-mongoose.connect("mongodb+srv://devsprout:1234@udemy-project-hpcze.mongodb.net/Blogs?retryWrites=true&w=majority", {		//Left password in for demonstration purposes
+
+
+mongoose.connect(process.env.DATABASEURL, {
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useFindAndModify: false
@@ -115,6 +117,6 @@ app.delete("/blogs/:id", (req,res) => {
 });
 
 //Open
-app.listen(3000, ()=> {
-	console.log("Blog listening on Port 3000");
+app.listen(process.env.PORT, process.env.IP, function(){
+   console.log("The Blog Server Has Started!");
 });
