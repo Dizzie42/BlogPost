@@ -6,7 +6,6 @@ var express = require("express"),
 	app = express();
 
 
-
 mongoose.connect(process.env.DATABASEURL, {
 	useNewUrlParser: true,
 	useCreateIndex: true,
